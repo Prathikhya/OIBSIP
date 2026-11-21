@@ -409,32 +409,19 @@ color: var(--platinum);
 
 
 
-/* /* part3  */
-
-/* part3 left/ */
-/* .part3{
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  
-} */
-
+/* ===== part 3 layout ===== */
 .part3 {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem;
 }
 
-.part-title{
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
+/* ===== trending ===== */
 .trending-card {
-  padding: 1rem;
+  padding: 1.2rem;
+  min-height: 340px;
   border: none;
   border-radius: 14px;
   background: #eef0fb;
@@ -445,7 +432,7 @@ color: var(--platinum);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .trending-header h5 {
@@ -461,11 +448,11 @@ color: var(--platinum);
 
 .trending-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0rem 1rem;
-
 }
 
 .trending-item {
@@ -495,25 +482,31 @@ color: var(--platinum);
 }
 
 .trending-item .card-rating {
-  float: right;
+  float: none;
   font-size: 0.75rem;
   margin-top: 0.2rem;
 }
 
+.trending-item .card-rating i {
+  color: #f5b301;
+}
 
+/* ===== sale card ===== */
 .sale-card {
+  min-height: 340px;
   border: none;
   border-radius: 14px;
-  overflow: hidden;
-  min-height: 320px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
 }
 
 .sale-card .card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  min-height: 320px;
   object-fit: cover;
   object-position: right center;
+  border-radius: 14px;
 }
 
 .sale-overlay {
@@ -523,6 +516,7 @@ color: var(--platinum);
   align-items: flex-start;
   padding: 2rem;
   color: white;
+  border-radius: 14px;
   background: linear-gradient(90deg, rgba(15, 16, 80, 0.95) 0%, rgba(15, 16, 80, 0.6) 50%, rgba(15, 16, 80, 0.05) 100%);
 }
 
@@ -564,7 +558,7 @@ color: var(--platinum);
 }
 
 .sale-btn.primary {
-  background: var(--accent);
+  background: var(--grey-olive);
   color: white;
 }
 
@@ -583,33 +577,74 @@ color: var(--platinum);
   background: rgba(255, 255, 255, 0.15);
 }
 
-@media (max-width: 768px) {
-  .sale-overlay .card-title { font-size: 1.8rem; }
-}
-
-
+/* ===== flash offers ===== */
+/* ===== flash offers (slider) ===== */
 .flash-card {
-  padding: 1.2rem;
+  position: relative;
+  min-height: 340px;
+  padding: 0;
   border: none;
   border-radius: 14px;
-  background: #e8ebfa;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 8px;
-  text-align: center;
+}
+
+/* carousel fills the whole card */
+.flash-card .carousel {
+  position: absolute;
+  inset: 0;
+}
+
+.flash-card .carousel-inner,
+.flash-card .carousel-item {
+  height: 100%;
+}
+
+/* picture covers the whole slide */
+.flash-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark gradient + product info at the bottom */
+.flash-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.2rem 1.2rem 2.4rem;
+  color: white;
+  background: linear-gradient(
+    to top,
+    rgba(15, 16, 80, 0.92) 0%,
+    rgba(15, 16, 80, 0.45) 45%,
+    rgba(15, 16, 80, 0.1) 100%
+  );
+}
+
+/* fixed title + countdown on top of the slides */
+.flash-header {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  right: 1.2rem;
+  z-index: 3;
+  color: white;
 }
 
 .flash-title {
   font-size: 1rem;
   font-weight: 600;
-  text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
-/* countdown */
 .countdown {
   display: flex;
-  justify-content: center;
   gap: 0.6rem;
-  margin-bottom: 1.2rem;
 }
 
 .time-box {
@@ -624,31 +659,12 @@ color: var(--platinum);
   line-height: 1.1;
 }
 
-.time-box strong {
-  font-size: 1.2rem;
-}
+.time-box strong { font-size: 1.2rem; }
+.time-box span   { font-size: 0.6rem; letter-spacing: 0.05rem; }
 
-.time-box span {
-  font-size: 0.6rem;
-  letter-spacing: 0.05rem;
-}
-
-/* product row */
-.flash-product {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  text-align: left;
-}
-
-.flash-product img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
-
+/* product text */
 .flash-name {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: 0 0 0.3rem;
 }
 
@@ -658,51 +674,40 @@ color: var(--platinum);
   gap: 0.5rem;
 }
 
-.new-price {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
+.new-price { font-size: 1.3rem; font-weight: 700; }
 .old-price {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: line-through;
 }
 
 .discount {
-  display: inline-block;
-  margin-top: 0.3rem;
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  padding: 0.15rem 0.6rem;
+  background: var(--accent);
+  border-radius: 20px;
   font-size: 0.7rem;
   font-weight: 600;
-  color: #1a8f4c;
 }
 
-/* dots */
+/* turn Bootstrap's bar indicators into small dots */
 .flash-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.4rem;
-  margin-top: 1rem;
+  margin: 0 0 0.7rem;
 }
 
-.dot {
-  width: 7px;
-  height: 7px;
+.flash-dots button {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 0.25rem !important;
+  padding: 0;
+  border: 0 !important;
   border-radius: 50%;
-  background: #c3c8e8;
+  background-color: white;
+  opacity: 0.5;
 }
 
-.dot.active {
-  background: var(--accent);
-}
-
-@media (max-width: 768px) {
-  .flash-product img {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-.part4{
-  padding: 1rem;
+.flash-dots button.active {
+  background-color: var(--accent);
+  opacity: 1;
 }

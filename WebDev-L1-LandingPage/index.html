@@ -282,102 +282,126 @@
               </div>
             
 
-            <div class="part3">
+          <div class="part3">
 
-              <!-- part3 left -->
-              <div class="card left" style="width: 20rem;">
-                <div class="card-body title part-title">
-                  <h5 class="card-title">Trending Now</h5>
-                  <a href="#">See All</a>
-                </div>
-
-                <ol class="trending-list">
-    <li class="trending-item">
-      <span class="rank">1</span>
-      <img src="images/c1.png" alt="Wireless headphones">
-      <div class="info">
-        <p>Wireless Noise Cancelling Headphones</p>
-        <div class="card-rating"><i class="fa-solid fa-star"></i> 4.8</div>
-      </div>
-    </li>
-
-    <li class="trending-item">
-      <span class="rank">2</span>
-      <img src="images/c2.png" alt="Denim jacket">
-      <div class="info">
-        <p>Oversized Fit Denim Jacket</p>
-        <div class="card-rating"><i class="fa-solid fa-star"></i> 4.6</div>
-      </div>
-    </li>
-
-    <li class="trending-item">
-      <span class="rank">3</span>
-      <img src="images/c3.png" alt="Vitamin C serum">
-      <div class="info">
-        <p>Vitamin C Brightening Serum</p>
-        <div class="card-rating"><i class="fa-solid fa-star"></i> 4.7</div>
-      </div>
-    </li>
-  </ol>
-
-              </div>
-
-
-              <!-- part3 middle -->
-              <div class="card sale-card">
-  <img src="images/like.jpeg" class="card-img" alt="Summer sale model with sunglasses">
-
-  <div class="card-img-overlay sale-overlay">
-    <span class="sale-tag">Limited Time</span>
-    <h2 class="card-title">Summer <br> Refresh <br> Sale</h2>
-    <p class="card-text">Up to 50% Off</p>
-
-    <div class="sale-buttons">
-      <a href="#" class="sale-btn primary">Shop The Sale</a>
-      <a href="#" class="sale-btn secondary">View Offers</a>
+  <!-- left: trending -->
+  <div class="card trending-card">
+    <div class="trending-header">
+      <h5>Trending Now</h5>
+      <a href="#">See All</a>
     </div>
+
+    <ol class="trending-list">
+      <li class="trending-item">
+        <span class="rank">1</span>
+        <img src="images/c1.png" alt="Wireless headphones">
+        <div class="info">
+          <p>Wireless Noise Cancelling Headphones</p>
+          <div class="card-rating"><i class="fa-solid fa-star"></i> 4.8</div>
+        </div>
+      </li>
+
+      <li class="trending-item">
+        <span class="rank">2</span>
+        <img src="images/c2.png" alt="Denim jacket">
+        <div class="info">
+          <p>Oversized Fit Denim Jacket</p>
+          <div class="card-rating"><i class="fa-solid fa-star"></i> 4.6</div>
+        </div>
+      </li>
+
+      <li class="trending-item">
+        <span class="rank">3</span>
+        <img src="images/c3.png" alt="Vitamin C serum">
+        <div class="info">
+          <p>Vitamin C Brightening Serum</p>
+          <div class="card-rating"><i class="fa-solid fa-star"></i> 4.7</div>
+        </div>
+      </li>
+    </ol>
   </div>
-              </div>
 
-              <!-- part3 right -->
-              <div class="card flash-card">
-  <h5 class="flash-title">Flash Offers</h5>
+  <!-- middle: sale -->
+  <div class="card sale-card">
+    <img src="images/like.jpeg" class="card-img" alt="Summer sale model with sunglasses">
 
-  <div class="countdown">
-    <div class="time-box">
-      <strong>02</strong>
-      <span>HRS</span>
-    </div>
-    <div class="time-box">
-      <strong>45</strong>
-      <span>MINS</span>
-    </div>
-    <div class="time-box">
-      <strong>18</strong>
-      <span>SECS</span>
+    <div class="card-img-overlay sale-overlay">
+      <span class="sale-tag">Limited Time</span>
+      <h2 class="card-title">Summer <br> Refresh <br> Sale</h2>
+      <p class="card-text">Up to 50% Off</p>
+
+      <div class="sale-buttons">
+        <a href="#" class="sale-btn primary">Shop The Sale</a>
+        <a href="#" class="sale-btn secondary">View Offers</a>
+      </div>
     </div>
   </div>
 
-  <div class="flash-product">
-    <img src="images/mang.png" alt="Portable Bluetooth speaker">
-    <div class="flash-info">
-      <p class="flash-name">Portable Bluetooth Speaker</p>
-      <div class="flash-price">
-        <span class="new-price">₹ 2,499</span>
-        <span class="old-price">₹ 4,999</span>
+  <!-- right: flash offers -->
+ <!-- right: flash offers -->
+<div class="card flash-card">
+  <div id="flashCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+    <!-- fixed header: stays while slides change -->
+    <div class="flash-header">
+      <h5 class="flash-title">Flash Offers</h5>
+      <div class="countdown">
+        <div class="time-box"><strong>02</strong><span>HRS</span></div>
+        <div class="time-box"><strong>45</strong><span>MINS</span></div>
+        <div class="time-box"><strong>18</strong><span>SECS</span></div>
       </div>
-      <span class="discount">50% OFF</span>
     </div>
-  </div>
 
-  <div class="flash-dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-              </div>
+    <!-- slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/mang.png" class="flash-img" alt="Portable Bluetooth speaker">
+        <div class="flash-overlay">
+          <p class="flash-name">Portable Bluetooth Speaker</p>
+          <div class="flash-price">
+            <span class="new-price">₹ 2,499</span>
+            <span class="old-price">₹ 4,999</span>
+          </div>
+          <span class="discount">50% OFF</span>
+        </div>
+      </div>
 
-            </div>
+      <div class="carousel-item">
+        <img src="images/bts.jpg" class="flash-img" alt="Smart watch">
+        <div class="flash-overlay">
+          <p class="flash-name">Smart Fitness Watch</p>
+          <div class="flash-price">
+            <span class="new-price">₹ 3,999</span>
+            <span class="old-price">₹ 6,999</span>
+          </div>
+          <span class="discount">42% OFF</span>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/c1.png" class="flash-img" alt="Running sneakers">
+        <div class="flash-overlay">
+          <p class="flash-name">Premium Sneakers</p>
+          <div class="flash-price">
+            <span class="new-price">₹ 2,999</span>
+            <span class="old-price">₹ 4,499</span>
+          </div>
+          <span class="discount">33% OFF</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- dots -->
+    <div class="carousel-indicators flash-dots">
+      <button type="button" data-bs-target="#flashCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#flashCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#flashCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+  </div>
+</div>
+
+</div>
 
 
             <div class="part4">
