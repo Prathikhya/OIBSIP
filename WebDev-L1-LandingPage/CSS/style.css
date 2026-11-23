@@ -245,19 +245,19 @@ color: var(--platinum);
 /* part1 */
 /* titles */
 
-.part-title{
+.title{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
 }
 
-.part-title h5{
+.title h5{
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.part-title a{
+.title a{
   text-decoration: none;
   font-size: 1rem;
 }
@@ -291,19 +291,19 @@ color: var(--platinum);
 /* part2 */
 /* section wrapper */
 
-.part-title {
+.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.part-title h5 {
+.title h5 {
   font-weight: 600;
   
 }
 
-.part-title a {
+.title a {
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -710,4 +710,65 @@ color: var(--platinum);
 .flash-dots button.active {
   background-color: var(--accent);
   opacity: 1;
+}
+
+
+/* part-4  starts*/
+.part4{
+  padding: 1rem;
+  
+}
+
+.news{
+  background-color: var(--dusk-blue);
+  color: white;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;   
+  
+  /* use "wrap" if you want them to drop to the next line on small screens */
+  gap: 1rem;
+  padding: 1rem;
+}
+.rewards,
+.picks,
+.gift-cards,
+.refer {
+  display: flex;
+  gap: .5rem;
+  flex: 1;    
+  /* all four share the width equally */
+}
+
+
+.news img {
+  width: 6rem;
+  flex-shrink: 0;   
+  border-radius: 1rem;
+  /* stops the image from squishing */
+}
+
+.news h5{
+  font-weight: 600;
+  font-size: 1rem;
+  padding-top: .5rem;
+}
+
+.news p{
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* part 5 */
+.content{
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.card{
+  display: flex;
+  
 }
